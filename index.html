@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,81 +8,58 @@
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
     <header>
         <h1>Weather Dashboard</h1>
         <p id="currentDay"></p>
     </header>
 
+    <form id="searchForm">
+        <h2>Search for a City:</h2> <br>
+        <input type="text" placeholder="Enter a location" id="searchbar">
+
+        <!-- clickable button to search -->
+        <button id="search-btn">Search</button>
+    </form>
+
     <main class="container">
         <!-- current weather info -->
         <div class="current-info">
             <h2 class="name"></h2>
 
-            <h2>Temperature:</h2>
+            <h2> Temperature:</h2>
             <p class="temp"></p>
 
-            <h2>Wind Speed:</h2>
+            <h2> Wind Speed:</h2>
             <p class="wind-speed"></p>
 
-            <h2>Humidity:</h2>
+            <h2> Humidity:</h2>
             <p class="humidity"></p>
 
-           
+
         </div>
+
+        <section class ="forecast" id="forecastContainer"></section>
     </main>
 
-    <!-- future forecast -->
-    <section class="container">
-        <!-- Day 1 -->
-        <div class="future-forecast">
-            <p>Day 1</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity</p>
-
-        </div>
-        <!-- Day 2 -->
-        <div class="future-forecast">
-            <p>Day 2</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity</p>
-
-        </div>   
-        <!-- Day 3 -->
-        <div class="future-forecast">
-            <p>Day 3</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity</p>
-
-        </div>   
-        <!-- Day 4 -->
-        <div class="future-forecast">
-            <p>Day 4</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity</p>
-
-        </div>   
-        <!-- Day 5 -->
-        <div class="future-forecast">
-            <p>Day 5</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity</p>
-
-        </div>   
-
-    </section>
-    <!-- search bar -->
-    <input type="text" placeholder="Enter a location" id="searchbar">
-    <!-- clickable button to search -->
-    <button id="search-btn">Search</button>
-
+    <!-- use day.js to easily format dates -->
+    <script
+        src = "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+        integrity = "sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+        crossorigin = "anonymous"></script>
+   
+    <script
+        src = "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js"
+        integrity = "sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w=="
+        crossorigin = "anonymous"></script>
     
-
+    <script
+        src = "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js"
+        integrity = "sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg=="
+        crossorigin = "anonymous"></script>
+   
     <script src="./assets/script.js"></script>
 </body>
+
 </html>

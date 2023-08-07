@@ -1,5 +1,10 @@
 header {
-    background-color: aqua;
+    background-color: blanchedalmond;
+    border-bottom: solid;
+}
+
+body {
+    background-color: #98c1d9;
 }
 
 h1 {
@@ -12,3 +17,49 @@ h1 {
     text-align: center;
     font-size: 20px;
 }
+
+#forecastContainer {
+    text-align: center;
+
+}
+
+.name, .temp, .humidity, .wind-speed {
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+
+.forecast{
+    display: flex;
+    padding: 50px 50px 0px 0px;
+    background-color: #98c1d9;
+}
+
+.current-info {
+    max-width: 50%;
+    float: left;
+    border: solid;
+    background-color: blanchedalmond;
+}
+
+form {
+    padding-left: 15px;
+    max-width: 300px;
+}
+
+h4, div, h4, p {
+    padding: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    .forecast {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
